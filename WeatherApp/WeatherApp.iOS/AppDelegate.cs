@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Microsoft.Azure.Mobile;
 
 namespace WeatherApp.iOS
 {
@@ -23,6 +24,9 @@ namespace WeatherApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            MobileCenter.Configure("13939ffe-bf4d-44c8-a272-8dfa6ff5b2a3");
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
